@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+section video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.navigation {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navigation li {
+  list-style-type: none;
+  margin: 0 10px;
+  padding: 3px 3px 0;
+  background-color: white;
+  opacity: 0.7;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.navigation li:hover {
+  opacity: 1;
+  transform: scale(1.3);
+}
+.navigation li img {
+  width: 150px;
+}

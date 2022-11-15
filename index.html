@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Slider</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section>
+      <video id="slider" autoplay loop muted>
+        <source src="./assets/videos/video (1).mp4" type="video/mp4" />
+      </video>
+    </section>
+    <ul class="navigation">
+      <li data-source="Pexels Videos 1779202.mp4">
+        <img src="./assets/images/Screenshot 2022-06-15 110401.png" alt="" />
+      </li>
+      <li data-source="Pexels Videos 2519660.mp4">
+        <img src="./assets/images/Screenshot 2022-06-15 110508.png" alt="" />
+      </li>
+      <li data-source="video (1).mp4">
+        <img src="./assets/images/Screenshot 2022-06-15 110532.png" alt="" />
+      </li>
+      <li data-source="video.mp4">
+        <img src="./assets/images/Screenshot 2022-06-15 110559.png" alt="" />
+      </li>
+    </ul>
+    <script type="text/javascript">
+      const panner = document.getElementById("slider");
+      const items = document.querySelectorAll("ul li");
+      items.forEach((item) => {
+        item.addEventListener("click", () => {
+          panner.src = "./assets/videos/" + item.dataset.source;
+        });
+      });
+    </script>
+  </body>
+</html>
